@@ -1,0 +1,132 @@
+.projects-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.projects-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.projects-header p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  background: var(--orange-light);
+  transform: translateY(-1px);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 30, 56, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 32px;
+  width: 480px;
+  max-width: 95vw;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.25s cubic-bezier(.22,1,.36,1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal h2 {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.form-grid input,
+.form-grid select {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  color: var(--text);
+  transition: border-color 0.2s;
+  background: #fff;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+  border-color: var(--blue-accent);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-cancel {
+  background: var(--bg);
+  color: var(--text-muted);
+  border: 1.5px solid var(--border);
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
